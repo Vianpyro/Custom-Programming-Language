@@ -1,0 +1,4 @@
+var int patate
+var bool test
+patate 10
+test true
