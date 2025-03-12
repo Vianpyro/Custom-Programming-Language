@@ -1,0 +1,21 @@
+{
+    "name": "Go Development Container",
+    "dockerFile": "Dockerfile",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "golang.go"
+            ]
+        },
+        "settings": {
+            "terminal.integrated.shell.linux": "/bin/bash",
+            "go.gopath": "/go",
+            "go.goroot": "/usr/local/go"
+        }
+    },
+    "postCreateCommand": "go mod tidy",
+    "mounts": [
+        "source=${localWorkspaceFolder},target=/workspace,type=bind"
+    ],
+    "remoteUser": "admin"
+}
